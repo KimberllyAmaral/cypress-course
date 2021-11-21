@@ -29,12 +29,17 @@ describe("Tickets", () => {
     })
 
     // Checking and unchecking checkbox;
-    it.only("selects 'friend', and 'publication', then uncheck 'friend'", () => {
+    it("selects 'friend', and 'publication', then uncheck 'friend'", () => {
         cy.get("#friend").check();
         cy.get("#publication").check();
         cy.get("#friend").uncheck();
     });
-    
+
+    //Verifying if the header h1 contains a specific value;
+    it.only("has 'TICKETBOX' header's heading", () => {
+        cy.get("header h1").should("contain", "TICKETBOX");
+    });
+
     // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
 });
