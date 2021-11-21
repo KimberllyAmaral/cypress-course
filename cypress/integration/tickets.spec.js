@@ -18,15 +18,23 @@ describe("Tickets", () => {
         cy.get("#ticket-quantity").select("2");
     });
 
-    // testing radio button
-    it.only("select 'vip' ticket type", () => {
+    // testing radio button;
+    it("select 'vip' ticket type", () => {
         cy.get("#vip").check();
     })
 
-    // Selecting one checkbox option
-    it("selecs 'social media' checkbox", () => {
-        cy.get("#social-media").check;
+    // Checking one checkbox option;
+    it("selects 'social media' checkbox", () => {
+        cy.get("#social-media").check();
     })
+
+    // Checking and unchecking checkbox;
+    it.only("selects 'friend', and 'publication', then uncheck 'friend'", () => {
+        cy.get("#friend").check();
+        cy.get("#publication").check();
+        cy.get("#friend").uncheck();
+    });
+    
     // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
 });
