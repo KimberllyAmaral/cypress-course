@@ -36,10 +36,18 @@ describe("Tickets", () => {
     });
 
     //Verifying if the header h1 contains a specific value;
-    it.only("has 'TICKETBOX' header's heading", () => {
+    it("has 'TICKETBOX' header's heading", () => {
         cy.get("header h1").should("contain", "TICKETBOX");
     });
 
+    //Verifying invalid email
+    it.only("alerts on invalid email", () => {
+        cy.get("#email")
+          .as("email")
+          .type("kimberllys.amaral-gmail.com");
+        cy.get("#email.invalid").should("exist");
+        
+    })
     // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
 });
