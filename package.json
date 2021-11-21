@@ -1,0 +1,20 @@
+{
+  "name": "cypress-course",
+  "version": "1.0.0",
+  "description": "Curso de Cypress da Escola TAT",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "e2e"
+  ],
+  "author": "Kimberlly Amaral",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^9.0.0"
+  }
+}
