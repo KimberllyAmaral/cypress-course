@@ -23,6 +23,10 @@ describe("Tickets", () => {
         cy.get("#vip").check();
     })
 
+    // Selecting one checkbox option
+    it("selecs 'social media' checkbox", () => {
+        cy.get("#social-media").check;
+    })
     // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
 });
