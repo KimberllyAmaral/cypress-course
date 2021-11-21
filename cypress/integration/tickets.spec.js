@@ -1,5 +1,5 @@
 describe("Tickets", () => {
-    // visiting the following url
+    // visiting the following url;
     beforeEach(() => cy.visit("https://ticket-box.s3.eu-central-1.amazonaws.com/index.html")) 
     // .only can be added if you want to run just this specific test;
     it("fills all the text input fields", () =>{
@@ -13,9 +13,16 @@ describe("Tickets", () => {
         cy.get("#signature").type(`${firstName} ${lastName}`);
     });
 
-    it.only("select two tickets", () => {
+    // testing the select field;
+    it("select two tickets", () => {
         cy.get("#ticket-quantity").select("2");
     });
-    // Checking if the header has the title 'TICKETBOX'
+
+    // testing radio button
+    it.only("select 'vip' ticket type", () => {
+        cy.get("#vip").check();
+    })
+
+    // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
 });
