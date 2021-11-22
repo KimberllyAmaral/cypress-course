@@ -25,3 +25,6 @@ Este é um projeto de cypress utilizando o git.
 
 #### Abra o projeto no VS ou no editor que você preferir:
 * code .
+
+#### Digite o seguinte código no terminal:
+* npx cypress open
