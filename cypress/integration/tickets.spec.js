@@ -47,6 +47,12 @@ describe("Tickets", () => {
           .type("kimberllys.amaral-gmail.com");
         cy.get("#email.invalid").should("exist");
         
+        //type the correct email;
+        cy.get("@email")
+          .clear()
+          .type("kimberllys.amaral@gmail.com");
+
+          cy.get("#email.invalid").should("not.exist");
     })
     // Checking if the header has the title 'TICKETBOX';
     it("has 'TICKETBOX' header's heading", () => {});
